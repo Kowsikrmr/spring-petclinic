@@ -63,4 +63,4 @@ jobs:
       - name: Push Docker Image
         run: |
           docker tag kowsik-clinic kowsiknaraayanan/kowsik-clinic:${{ github.run_number }}
-          docker push kowsik-clinic kowsiknaraayanan/kowsik-clinic:${{ github.run_number }}
+          docker push kowsiknaraayanan/kowsik-clinic:${{ github.run_number }}
