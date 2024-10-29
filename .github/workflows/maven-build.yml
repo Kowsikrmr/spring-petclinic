@@ -41,7 +41,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: my-java-app  # This should match the name used in the previous workflow
-          path: ./artifact   # Downloads artifact content to the ./artifact directory
       # Step 3: Build the Docker image using the Dockerfile
       - name: Build Docker Image
         run: docker build -t myapp:latest -f Dockerfile ./artifact
