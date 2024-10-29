@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the JAR file from the artifact directory into the container
-COPY ./spring-petclinic-*.jar app.jar
+COPY ./kowsik-clinic-*.jar app.jar
 
 
 # Expose the application's port
