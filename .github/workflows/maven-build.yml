@@ -50,7 +50,7 @@ jobs:
         run: |
           ls -ltra
           pwd
-          docker build -t petclinic:latest -f Dockerfile .
+          docker build -t kowsik-clinic -f Dockerfile .
         # Adjust `Dockerfile` path if it’s in a subdirectory, e.g., `-f path/to/Dockerfile`
       # Step 4: Log in to Docker Hub
       - name: Log in to Docker Hub
@@ -62,5 +62,5 @@ jobs:
       # Step 5: Push Docker Image to Docker Hub
       - name: Push Docker Image
         run: |
-          docker tag petclinic:latest kowsiknaraayanan/petclinic:latest
-          docker push kowsiknaraayanan/petclinic:latest
+          docker tag kowsiknaraayanan/kowsik-clinic:${{ github.run_number }}
+          docker push kowsiknaraayanan/kowsik-clinic:${{ github.run_number }}
