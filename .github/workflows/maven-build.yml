@@ -51,7 +51,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: Kowsiknaraayanan
-          password: Naraayanan@77
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
       # Step 5: Push Docker Image to Docker Hub
       - name: Push Docker Image
         run: |
