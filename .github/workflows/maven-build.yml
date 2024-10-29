@@ -43,7 +43,7 @@ jobs:
           name: my-java-app  # This should match the name used in the previous workflow
       # Step 3: Build the Docker image using the Dockerfile
       - name: Build Docker Image
-        run: docker build -t myapp:latest -f Dockerfile ./artifact
+        run: docker build -t myapp:latest -f Dockerfile .
         # Adjust `Dockerfile` path if it’s in a subdirectory, e.g., `-f path/to/Dockerfile`
       # Step 4: Log in to Docker Hub
       - name: Log in to Docker Hub
